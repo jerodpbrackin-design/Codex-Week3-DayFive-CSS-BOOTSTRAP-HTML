@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pelican State IT - Complete Services</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #0b0e11;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      #page-bg {
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0b0e11 0%, #11161c 100%);
+      }
+
+      nav.navbar img {
+        height: 48px;
+        border-radius: 5px;
+      }
+
+      .btn-brand {
+        padding: 10px 18px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: 0.2s ease;
+      }
+
+      .btn-accent-brand {
+        background: #0d6efd;
+        color: white;
+      }
+
+      .btn-accent-brand:hover {
+        background: #0b5ed7;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+      .service-card {
+        background: #161c22;
+        border-radius: 10px;
+        padding: 24px;
+        min-height: 200px;
+        transition: 0.2s ease;
+      }
+
+      .service-card:hover {
+        background: #1d242c;
+        transform: translateY(-4px);
+      }
+
+      .site-footer {
+        padding: 25px 0;
+        text-align: center;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="page-bg">
+      <nav
+        class="navbar d-flex align-items-center justify-content-between px-4"
+      >
+        <div id="logo-container">
+          <a href="#"><img src="assets/pelican-light.png" /></a>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <a class="btn-brand btn-accent-brand" href="#services">Services</a>
+          <a class="btn-brand btn-accent-brand" href="#about">About Us</a>
+          <a class="btn-brand btn-accent-brand" href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="container py-5 text-center">
+        <h1 class="hero-title mb-3">Pelican State IT</h1>
+        <p class="hero-subtitle">
+          Secure, modern full-stack engineering with HIPAA-ready infrastructure.
+        </p>
+      </section>
+
+      <section id="services" class="container py-5 text-center">
+        <h1 class="hero-title mb-4">Our Services</h1>
+        <p class="hero-subtitle">
+          Full-stack development, cloud systems, HIPAA compliance, and more.
+        </p>
+
+        <div class="row mt-5 g-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <h3>Full-Stack App Development</h3>
+              <p>
+                Web apps, dashboards, CRMs, ecommerce, DeFi, and mobile apps
+                built securely and professionally.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <h3>HIPAA-Compliant Architecture</h3>
+              <p>
+                Auditing, encryption, access control, PHI-safe databases,
+                hardened infrastructure.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <h3>Accessibility-First UI/UX</h3>
+              <p>
+                WCAG-compliant interfaces with inclusive design and accessible
+                user patterns.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <h3>Cloud & DevOps</h3>
+              <p>
+                AWS/Azure deployments, pipelines, monitoring, scaling, CI/CD.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <h3>Cybersecurity Hardening</h3>
+              <p>
+                MFA, intrusion prevention, API protection, secure session
+                systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <h3>Mobile Apps</h3>
+              <p>
+                React Native, Swift, Xamarin — full mobile product development
+                and backend support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="container py-5 text-center">
+        <h1 class="hero-title mb-4">Available Products</h1>
+        <p class="hero-subtitle">
+          Tailoring your business needs, across every layer
+        </p>
+
+        <div id="products-list" class="row mt-4 g-4"></div>
+      </section>
+
+      <section id="about" class="container py-5 text-center">
+        <h1 class="hero-title mb-4">About Us</h1>
+        <p class="hero-subtitle">
+          We build secure, scalable solutions for healthcare, finance, and
+          enterprise clients using modern best practices and compliance-driven
+          design.
+        </p>
+      </section>
+
+      <section id="contact" class="container py-5 text-center">
+        <h1 class="hero-title mb-4">Contact Us</h1>
+        <form id="contact-form" class="mx-auto" style="max-width: 500px">
+          <input
+            class="form-control mb-3"
+            id="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="form-control mb-3"
+            id="email"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            class="form-control mb-3"
+            id="message"
+            placeholder="Your message..."
+            required
+          ></textarea>
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+        </form>
+        <p id="form-status" class="mt-3"></p>
+      </section>
+      <footer class="site-footer">
+        <p>© 2025 Jerod Brackin • Pelican State IT • All Rights Reserved</p>
+      </footer>
+    </div>
+    <script src="handleLeads.js"></script>
+    <script src="app.js"></script>
+    <script>
+      document
+        .getElementById('contact-form')
+        .addEventListener('submit', async (e) => {
+          e.preventDefault()
+
+          document.getElementById('form-status').innerText = 'Sending...'
+
+          try {
+            await handleLeads()
+            document.getElementById('form-status').innerText = 'Message sent!'
+            e.target.reset()
+          } catch (err) {
+            console.error(err)
+            document.getElementById('form-status').innerText =
+              'Error sending message.'
+          }
+        })
+    </script>
+  </body>
+</html>
